@@ -1,6 +1,6 @@
 class Stack(object):
     def is_empty(self):
-        pass
+        return True
 
     def size(self):
-        pass
+        return 0
