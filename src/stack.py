@@ -4,3 +4,9 @@ class Stack(object):
 
     def size(self):
         return 0
+
+    def push(self, element):
+        pass
+
+    def top(self):
+        pass
