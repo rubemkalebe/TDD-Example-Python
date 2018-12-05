@@ -16,6 +16,18 @@ class StackTest(unittest.TestCase):
         self.assertEqual(1, s.size())
         self.assertTrue("first", s.top())
 
+    def test_push_and_pop(self):
+        s = Stack()
+        s.push("first")
+        s.push("second")
+        self.assertEqual(2, s.size())
+        self.assertTrue("second", s.top())
+
+        removed = s.pop()
+        self.assertEqual(1, s.size())
+        self.assertEqual("first", s.top())
+        self.assertEqual("second", removed)
+
 
 if __name__ == '__main__':
     unittest.main()

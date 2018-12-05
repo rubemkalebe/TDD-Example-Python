@@ -15,3 +15,6 @@ class Stack(object):
 
     def top(self):
         return self.__element
+
+    def pop(self):
+        pass
