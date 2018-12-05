@@ -15,11 +15,11 @@ class Stack(object):
         self.__elements.append(element)
 
     def top(self):
+        if self.is_empty():
+            raise EmptyStackException
         return self.__elements[self.size()-1]
 
     def pop(self):
-        if self.is_empty():
-            raise EmptyStackException
         element = self.top()
         self.__elements.pop(self.size()-1)
         return element
