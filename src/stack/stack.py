@@ -1,4 +1,4 @@
-from src.empty_stack_exception import EmptyStackException
+from src.stack.empty_stack_exception import EmptyStackException
 
 
 class Stack(object):
