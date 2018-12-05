@@ -1,12 +1,17 @@
 class Stack(object):
+    def __init__(self):
+        self.__element = None
+        self.__size = 0
+
     def is_empty(self):
-        return True
+        return self.__element == None
 
     def size(self):
-        return 0
+        return self.__size
 
     def push(self, element):
-        pass
+        self.__element = element
+        self.__size += 1
 
     def top(self):
-        pass
+        return self.__element
