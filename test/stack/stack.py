@@ -1,5 +1,6 @@
 import unittest
 
+from src.empty_stack_exception import EmptyStackException
 from src.stack import Stack
 
 
@@ -27,6 +28,9 @@ class StackTest(unittest.TestCase):
         self.assertEqual(1, self.s.size())
         self.assertEqual("first", self.s.top())
         self.assertEqual("second", removed)
+
+    def test_pop_empty_stack(self):
+        self.assertRaises(EmptyStackException, self.s.pop)
 
 
 if __name__ == '__main__':
