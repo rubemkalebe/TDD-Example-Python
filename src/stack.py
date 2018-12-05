@@ -1,20 +1,20 @@
 class Stack(object):
     def __init__(self):
-        self.__element = None
-        self.__size = 0
+        self.__elements = []
 
     def is_empty(self):
-        return self.__element == None
+        return len(self.__elements) == 0
 
     def size(self):
-        return self.__size
+        return len(self.__elements)
 
     def push(self, element):
-        self.__element = element
-        self.__size += 1
+        self.__elements.append(element)
 
     def top(self):
-        return self.__element
+        return self.__elements[self.size()-1]
 
     def pop(self):
-        pass
+        element = self.top()
+        self.__elements.pop(self.size()-1)
+        return element
